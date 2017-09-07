@@ -1,0 +1,8 @@
+bin/
+obj/
+.vscode/
+**/node_modules/
+yarn.lock
+wwwroot/
+**/Client/dist
+npm-debug.log
