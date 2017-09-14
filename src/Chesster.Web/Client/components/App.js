@@ -1,10 +1,22 @@
 import React, { Component } from 'react';
+import { injectGlobal, ThemeProvider } from 'styled-components';
 
-import styles from './app.scss';
+import theme from './themes/default';
+
+injectGlobal`
+  html, body {
+    margin: 0;
+    height: 100vh;
+  }
+`;
 
 class App extends Component {
   render() {
-    return (<h1>VRBO test</h1>);
+    return (
+      <ThemeProvider theme={theme}>
+        <h1>VRBO test</h1>
+      </ThemeProvider>
+    );
   }
 }
 

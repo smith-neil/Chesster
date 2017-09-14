@@ -30,6 +30,12 @@ describe('PageTemplate', () => {
     expect(wrapper.contains('hero')).toBe(true);
   });
 
+  it('should not render a hero by default', () => {
+    const wrapper = wrap();
+
+    expect(wrapper.contains('hero')).toBe(false);
+  });
+
   it('should render a footer', () => {
     const wrapper = wrap();
 

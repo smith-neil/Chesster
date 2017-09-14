@@ -3,5 +3,21 @@
     "es2015",
     "stage-0",
     "react"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./Client"
+        ],
+        "alias": {
+          "components": "./Client/components",
+          "templates": "./Client/components/templates",
+          "organisms": "./Client/components/organisms"
+        }
+      }
+    ]
   ]
 }
