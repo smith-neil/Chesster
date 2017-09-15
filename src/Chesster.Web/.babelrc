@@ -15,7 +15,9 @@
         "alias": {
           "components": "./Client/components",
           "templates": "./Client/components/templates",
-          "organisms": "./Client/components/organisms"
+          "organisms": "./Client/components/organisms",
+          "molecules": "./Client/components/molecules",
+          "pages": "./Client/components/pages"
         }
       }
     ]

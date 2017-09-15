@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import { size } from 'styled-theme';
 
+import PrimaryNavigtaion from 'molecules/PrimaryNavigation';
+
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -25,6 +27,7 @@ const Header = (props) => {
   return (
     <Wrapper opaque reverse {...props}>
       <InnerWrapper>
+        <PrimaryNavigtaion />
         header
       </InnerWrapper>
     </Wrapper>

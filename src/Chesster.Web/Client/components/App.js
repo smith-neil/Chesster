@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import { injectGlobal, ThemeProvider } from 'styled-components';
 
 import theme from './themes/default';
+
+import HomePage from 'pages/HomePage';
+import AboutPage from 'pages/AboutPage';
 
 injectGlobal`
   html, body {
@@ -14,7 +18,10 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
-        <h1>VRBO test</h1>
+        <div>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/about" component={AboutPage} />
+        </div>
       </ThemeProvider>
     );
   }
