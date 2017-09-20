@@ -1,14 +1,21 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
+import { MemoryRouter } from 'react-router-dom';
 
 import AboutPage from '.';
 
 const wrap = (props = {}) => shallow(
-  <AboutPage {...props}>home</AboutPage>
+  <MemoryRouter>
+    <AboutPage {...props}>home</AboutPage>
+  </MemoryRouter>
 );
 
 describe('AboutPage', () => {
   it('should render', () => {
-    mount(<AboutPage />);
+    mount(
+      <MemoryRouter>
+        <AboutPage>about</AboutPage>
+      </MemoryRouter>
+    );
   });
 });
